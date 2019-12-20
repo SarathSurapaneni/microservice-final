@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS CUSTOMER_SOS;
+ 
+CREATE TABLE CUSTOMER_SOS (
+  cust_sos_id BIGINT(20) NOT NULL auto_increment,
+  cust_id int(20) NOT NULL,
+  cust_email VARCHAR(100) NOT NULL,
+  cust_first_name VARCHAR(100) NOT NULL,
+  cust_last_name VARCHAR(100) NOT NULL,
+  PRIMARY KEY  (cust_sos_id)
+);
+
+	
+DROP TABLE IF EXISTS SALES_ORDER;
+CREATE TABLE SALES_ORDER (
+  ORDER_ID BIGINT(20) NOT NULL auto_increment,
+  order_date VARCHAR(30) NOT NULL,
+  cust_id BIGINT(20) NOT NULL,
+  order_desc VARCHAR(2000) NOT NULL,
+  total_price BIGINT(20) NOT NULL,
+  PRIMARY KEY  (ORDER_ID)
+);
+
+DROP TABLE IF EXISTS ORDER_LINE_ITEM;
+CREATE TABLE ORDER_LINE_ITEM (
+  ORDER_LINE_ID BIGINT(20) NOT NULL auto_increment,
+  item_name VARCHAR(200) NOT NULL,
+  item_quantity BIGINT(20) NOT NULL,
+  order_id BIGINT(20) NOT NULL,
+  PRIMARY KEY  (ORDER_LINE_ID)
+  
+);

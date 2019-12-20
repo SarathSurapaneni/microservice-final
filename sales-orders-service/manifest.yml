@@ -1,0 +1,12 @@
+applications:
+- name: 291363-sales-order-service
+path: target/sales-orders-service-0.0.1-SNAPSHOT.jar
+domain: cfapps.io
+memory: 1G
+instances: 1
+services:
+- 291363-config-server
+- 291363-rabbitmq
+- 291363-mysql
+- 291363-service-registry
+- 291363-circuit-breaker
