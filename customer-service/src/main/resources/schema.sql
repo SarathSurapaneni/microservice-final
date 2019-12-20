@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS CUSTOMER;
+ 
+CREATE TABLE CUSTOMER (
+  id BIGINT(20) NOT NULL auto_increment,
+  email VARCHAR(100) NOT NULL,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  PRIMARY KEY  (id)
+);
